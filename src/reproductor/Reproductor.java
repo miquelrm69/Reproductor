@@ -14,21 +14,23 @@ public class Reproductor {
     private static int speakers, currentVolume = 10;
     public static enum modeTypes {CD, RADIO, EXT, USB};
     private static modeTypes currentMode;
+    private static double freqTune;
     
     public Reproductor() {
         speakers = 2;
         currentMode = modeTypes.RADIO;
     }
     
-    void display() {
+    static void display() {
         System.out.println("Mode: " + currentMode + " / Vol: " + currentVolume);
     }
     
-    void setMode(int m) {
+    static void setMode(int m) {
         switch (m) {
             case 1:
                 currentMode = modeTypes.CD;
                 display();
+                Panel.cdMode();
                 break;
             case 2:
                 currentMode = modeTypes.RADIO;
@@ -62,5 +64,33 @@ public class Reproductor {
     
     modeTypes getMode() {
         return currentMode;
+    }
+    
+    static void setTune(double t) {
+        freqTune = t;
+    }
+    
+    static double getTune() {
+        return freqTune;
+    }
+    
+    static void setCdMode(int cdM) {
+        switch (cdM) {
+            case 1:
+                Panel.chFreq();
+                break;
+            case 2:
+                //ChangeVolume
+                break;
+            case 3:
+                //SaveFrequence
+                break;
+            case 4:
+                Panel.modes();
+                break;
+            default:
+                System.out.println("Out of possible modes!");
+                break;
+        }
     }
 }
