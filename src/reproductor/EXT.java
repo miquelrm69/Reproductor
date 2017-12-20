@@ -9,9 +9,6 @@ package reproductor;
  *
  * @author miquel
  */
-public class Main {
-    public static void main(String[] args) {
-        Reproductor Sony1 = new Reproductor();
-        Sony1.mainMenu();
-    }
+public class EXT {
+    
 }

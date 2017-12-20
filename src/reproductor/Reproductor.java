@@ -5,92 +5,54 @@
  */
 package reproductor;
 
+import java.util.Scanner;
+
 /**
  *
  * @author miquel
  */
 public class Reproductor {
     
+    static Scanner input = new Scanner(System.in);
+    
     private static int speakers, currentVolume = 10;
-    public static enum modeTypes {CD, RADIO, EXT, USB};
-    private static modeTypes currentMode;
-    private static double freqTune;
+    private static enum modeType {CD, RADIO, EXT, USB};
+    private static modeType currentMode;
     
     public Reproductor() {
         speakers = 2;
-        currentMode = modeTypes.RADIO;
     }
     
-    static void display() {
-        System.out.println("Mode: " + currentMode + " / Vol: " + currentVolume);
+    static void mainMenu() {
+        System.out.println("** Menu **");
+        System.out.println("    1- " + modeType.CD);
+        System.out.println("    2- " + modeType.RADIO);
+        System.out.println("    3- " + modeType.EXT);
+        System.out.println("    4- " + modeType.USB);
+        System.out.print("Opt.: ");
+        int optMod = input.nextInt();
+        setMode(optMod);
     }
     
-    static void setMode(int m) {
-        switch (m) {
+    private static void setMode(int mode) {
+        switch (mode) {
             case 1:
-                currentMode = modeTypes.CD;
-                display();
-                Panel.cdMode();
                 break;
             case 2:
-                currentMode = modeTypes.RADIO;
-                display();
+                RADIO.menuRadio();
                 break;
             case 3:
-                currentMode = modeTypes.EXT;
-                display();
                 break;
             case 4:
-                currentMode = modeTypes.USB;
-                display();
-                break;
-            default:
-                System.out.println("Out of possible modes!");
                 break;
         }
     }
     
-    static void setVolume (int v) {
-        if (v > 100) {
-            System.out.println("Max Volume is 100!");
-        } else {
-            currentVolume = v;
-        }
-    }
-    
-    int getVolume() {
+    static int getVolume() {
         return currentVolume;
     }
     
-    modeTypes getMode() {
-        return currentMode;
-    }
-    
-    static void setTune(double t) {
-        freqTune = t;
-    }
-    
-    static double getTune() {
-        return freqTune;
-    }
-    
-    static void setCdMode(int cdM) {
-        switch (cdM) {
-            case 1:
-                Panel.chFreq();
-                break;
-            case 2:
-                Panel.chVolume();
-                break;
-            case 3:
-                //SaveFrequence
-                break;
-            case 4:
-                Panel.modes();
-                break;
-            default:
-                System.out.println("Out of possible modes!");
-                break;
-        }
+    static void chVolume(int v) {
+        currentVolume = v;
     }
 }
