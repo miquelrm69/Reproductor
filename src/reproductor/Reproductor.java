@@ -80,7 +80,7 @@ public class Reproductor {
                 Panel.chFreq();
                 break;
             case 2:
-                //ChangeVolume
+                Panel.chVolume();
                 break;
             case 3:
                 //SaveFrequence
