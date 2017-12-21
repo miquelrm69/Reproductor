@@ -24,10 +24,12 @@ public class RADIO {
     public static void menuRadio() {
         repeat = true;
         while (repeat) {
+            System.out.println("Vol. " + Reproductor.getVolume() + " Freq." + FreqTune);
             System.out.println("1-  Change Frequence");
             System.out.println("2- Change Volume");
             System.out.println("3- Save Frequence");
-            System.out.println("4- Exit");
+            System.out.println("4- Show Saved Frequences");
+            System.out.println("5- Exit");
             int opt = input.nextInt();
             switch (opt) {
                 case 1:
@@ -38,6 +40,12 @@ public class RADIO {
                     break;
                 case 3:
                     menuSaveFreq();
+                    break;
+                case 4:
+                    displaySavedFreq();
+                    break;
+                case 5:
+                    Reproductor.mainMenu();
                     break;
                 default:
                     repeat = false;
@@ -81,7 +89,9 @@ public class RADIO {
 
     public static void displaySavedFreq() {
         for (int i = 0; i < numSaveFreq.length; i++) {
-            System.out.println(nameSaveFreq[i]);
+            if (numSaveFreq != null) {
+                System.out.println(nameSaveFreq[i]);
+            }
         }
     }
 }

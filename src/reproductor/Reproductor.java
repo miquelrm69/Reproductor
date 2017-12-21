@@ -22,6 +22,7 @@ public class Reproductor {
     
     public Reproductor() {
         speakers = 2;
+        System.out.println("Vol." + currentVolume);
     }
     
     public static void mainMenu() {
@@ -38,6 +39,7 @@ public class Reproductor {
     private static void setMode(int mode) {
         switch (mode) {
             case 1:
+                CD.menuCD();
                 break;
             case 2:
                 RADIO.menuRadio();
