@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package reproductor;
+package reproductor.types;
 
 /**
  *
  * @author miquel
  */
-public class USB {
+public class CD {
     
 }

@@ -3,10 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package reproductor;
+package reproductor.types;
 
 import java.util.Arrays;
 import java.util.Scanner;
+import reproductor.*;
 
 /**
  *
@@ -20,7 +21,7 @@ public class RADIO {
     private static double[] numSaveFreq = new double[4];
     private static String[] nameSaveFreq = new String[numSaveFreq.length];
 
-    static void menuRadio() {
+    public static void menuRadio() {
         repeat = true;
         while (repeat) {
             System.out.println("1-  Change Frequence");
@@ -78,7 +79,7 @@ public class RADIO {
         FreqTune = freq;
     }
 
-    static void displaySavedFreq() {
+    public static void displaySavedFreq() {
         for (int i = 0; i < numSaveFreq.length; i++) {
             System.out.println(nameSaveFreq[i]);
         }

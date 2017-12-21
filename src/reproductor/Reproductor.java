@@ -5,6 +5,7 @@
  */
 package reproductor;
 
+import reproductor.types.*;
 import java.util.Scanner;
 
 /**
@@ -23,7 +24,7 @@ public class Reproductor {
         speakers = 2;
     }
     
-    static void mainMenu() {
+    public static void mainMenu() {
         System.out.println("** Menu **");
         System.out.println("    1- " + modeType.CD);
         System.out.println("    2- " + modeType.RADIO);
@@ -48,11 +49,11 @@ public class Reproductor {
         }
     }
     
-    static int getVolume() {
+    public static int getVolume() {
         return currentVolume;
     }
     
-    static void chVolume(int v) {
+    public static void chVolume(int v) {
         currentVolume = v;
     }
 }
