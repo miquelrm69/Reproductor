@@ -22,43 +22,34 @@ public class RADIO {
     private static String[] nameSaveFreq = new String[numSaveFreq.length];
 
     public static void menuRadio() {
-        repeat = true;
-        while (repeat) {
-            System.out.println("Vol. " + Reproductor.getVolume() + " Freq." + FreqTune);
-            System.out.println("1-  Change Frequence");
-            System.out.println("2- Change Volume");
-            System.out.println("3- Save Frequence");
-            System.out.println("4- Show Saved Frequences");
-            System.out.println("5- Exit");
-            int opt = input.nextInt();
-            switch (opt) {
-                case 1:
-                    menuChFreq();
-                    break;
-                case 2:
-                    menuChVol();
-                    break;
-                case 3:
-                    menuSaveFreq();
-                    break;
-                case 4:
-                    displaySavedFreq();
-                    break;
-                case 5:
-                    Reproductor.mainMenu();
-                    break;
-                default:
-                    repeat = false;
-                    break;
-            }
+        System.out.println("Vol. " + Reproductor.getVolume() + " Freq." + FreqTune);
+        System.out.println("1-  Change Frequence");
+        System.out.println("2- Change Volume");
+        System.out.println("3- Save Frequence");
+        System.out.println("4- Show Saved Frequences");
+        System.out.println("5- Exit");
+        int opt = input.nextInt();
+        switch (opt) {
+            case 1:
+                menuChFreq();
+                break;
+            case 2:
+                Reproductor.menuChVol();
+                break;
+            case 3:
+                menuSaveFreq();
+                break;
+            case 4:
+                displaySavedFreq();
+                break;
+            case 5:
+                Reproductor.mainMenu();
+                break;
+            default:
+                repeat = false;
+                break;
         }
-    }
-
-    private static void menuChVol() {
-        System.out.println("Actual volume: " + Reproductor.getVolume());
-        System.out.print("New volume: ");
-        int newVolume = input.nextInt();
-        Reproductor.chVolume(newVolume);
+        menuRadio();
     }
 
     private static void menuChFreq() {

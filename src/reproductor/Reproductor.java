@@ -31,6 +31,7 @@ public class Reproductor {
         System.out.println("    2- " + modeType.RADIO);
         System.out.println("    3- " + modeType.EXT);
         System.out.println("    4- " + modeType.USB);
+        System.out.println("    5- Change volume");
         System.out.print("Opt.: ");
         int optMod = input.nextInt();
         setMode(optMod);
@@ -45,8 +46,12 @@ public class Reproductor {
                 RADIO.menuRadio();
                 break;
             case 3:
+                EXT.menuExt();
                 break;
             case 4:
+                break;
+            case 5:
+                menuChVol();
                 break;
         }
     }
@@ -55,7 +60,14 @@ public class Reproductor {
         return currentVolume;
     }
     
-    public static void chVolume(int v) {
+    private static void chVolume(int v) {
         currentVolume = v;
+    }
+    
+    public static void menuChVol() {
+        System.out.println("Actual volume: " + Reproductor.getVolume());
+        System.out.print("New volume: ");
+        int newVolume = input.nextInt();
+        chVolume(newVolume);
     }
 }

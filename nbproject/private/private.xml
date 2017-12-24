@@ -3,12 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/miquel/Documents/PROJECTES_JAVA/Reproductor/src/reproductor/EXT.java</file>
+            <file>file:/home/miquel/Documents/PROJECTES_JAVA/Reproductor/src/reproductor/types/CD.java</file>
             <file>file:/home/miquel/Documents/PROJECTES_JAVA/Reproductor/src/reproductor/Reproductor.java</file>
-            <file>file:/home/miquel/Documents/PROJECTES_JAVA/Reproductor/src/reproductor/RADIO.java</file>
-            <file>file:/home/miquel/Documents/PROJECTES_JAVA/Reproductor/src/reproductor/USB.java</file>
+            <file>file:/home/miquel/Documents/PROJECTES_JAVA/Reproductor/src/reproductor/types/RADIO.java</file>
+            <file>file:/home/miquel/Documents/PROJECTES_JAVA/Reproductor/src/reproductor/types/USB.java</file>
             <file>file:/home/miquel/Documents/PROJECTES_JAVA/Reproductor/src/reproductor/Main.java</file>
-            <file>file:/home/miquel/Documents/PROJECTES_JAVA/Reproductor/src/reproductor/CD.java</file>
+            <file>file:/home/miquel/Documents/PROJECTES_JAVA/Reproductor/src/reproductor/types/EXT.java</file>
         </group>
     </open-files>
 </project-private>
